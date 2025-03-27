@@ -2,9 +2,14 @@
 
 public class Musica
 {
-    public Musica(string nome)
+    public Musica(string nome, int artistaId, int? AnoLancamento)
     {
         Nome = nome;
+        if (Artista is not null)
+        {
+            Artista.Id = artistaId;
+        }
+        this.AnoLancamento = AnoLancamento;
     }
 
     public string Nome { get; set; }
